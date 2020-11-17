@@ -9,7 +9,6 @@ class Nav extends React.Component {
     super(props);
   }
   render() {
-    console.log('navvvv', this.props);
     return (
       <div data-testid="nav">
         <Header>

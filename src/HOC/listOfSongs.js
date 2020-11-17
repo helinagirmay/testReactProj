@@ -39,14 +39,12 @@ class Song extends React.Component {
   }
 
   handleClick = () => {
-    console.log("propsssss", this.props.state.name);
     this.setState({
       likes: this.state.likes + 1,
     });
   };
 
   switched = (checked) => {
-    console.log("cjkk", checked);
     this.setState({
       switch: checked,
     });
@@ -66,7 +64,6 @@ class Song extends React.Component {
   };
 
   render() {
-    console.log("props on list song", this.props, this.state.switch);
     const musicCardList = [
       {
         id: 1,
@@ -177,7 +174,6 @@ class Song extends React.Component {
           </div>
         </Content>
         {this.state.switch &&
-          (console.log("yesss0"),
           (
             <Modal
               title="Admin Password"
@@ -206,7 +202,7 @@ class Song extends React.Component {
                 </Form.Item>
               </Form>
             </Modal>
-          ))}
+          )}
       </div>
     );
   }

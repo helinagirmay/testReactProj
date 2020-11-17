@@ -11,7 +11,8 @@ export default class Login extends Component {
       loading: false,
       visible: props.visible,
       valueName: '',
-      valuePass:''
+      valuePass:'',
+      path: [this.props.history]
     };
   }
   Cancel = () => {
@@ -43,7 +44,6 @@ export default class Login extends Component {
   }
 
   render() {
-    console.log('props on login', this.props);
     const tailLayout = {
       wrapperCol: {
         offset: 8,
@@ -51,7 +51,7 @@ export default class Login extends Component {
       },
     };
     return (
-      <div>
+      <div data-testid="login">
         <Card
           //   bordered={false}
           style={{
