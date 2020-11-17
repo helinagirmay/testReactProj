@@ -23,7 +23,9 @@ class Nav extends React.Component {
             <Menu.Item key="1">
               {/* Public Page */}
               <BrowserRouter>
+              {this.props.isLoggedIn && this.props.isLoggedIn.length ? []:
                 <Link to="/">Public Page</Link>
+              }
               </BrowserRouter>
             </Menu.Item>
             <Menu.Item key="2" onClick={this.login}>
